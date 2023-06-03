@@ -31,10 +31,8 @@ function mergeAlternately(word1: string, word2: string): string {
     return ret;
 };
 
-function runTests(): void {
+(() => {
     console.log((mergeAlternately("abc", "pqr") === "apbqcr") ? "✅ | TEST #1" : "❌ | TEST #1: Expected \'apbqcr\' for \'abc\' + \'pqr\'.");
     console.log((mergeAlternately("ab", "pqrs") === "apbqrs") ? "✅ | TEST #2" : "❌ | TEST #2: Expected \'apbqrs\' for \'ab\' + \'pqrs\'.");
-    console.log((mergeAlternately("abcd", "pq") === "apbqcd") ? "✅ | TEST #3" : "❌ | TEST #1: Expected \'apbqcd\' for \'abcd\' + \'pq\'.");
-}
-
-runTests();
+    console.log((mergeAlternately("abcd", "pq") === "apbqcd") ? "✅ | TEST #3" : "❌ | TEST #3: Expected \'apbqcd\' for \'abcd\' + \'pq\'.");
+})();
